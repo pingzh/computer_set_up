@@ -1,10 +1,9 @@
 # computer_set_up
 
-#### 1. vim
-
-#### 2. git
-
-
 #### .bash_profile
 
-#### .screenrc
+```
+mkdir ~/.dotfiles
+git clone git@github.com:pingzh/computer_set_up.git ~/.dotfiles/
+ln -sf ~/.dotfiles/bash_profile ~/.bash_profile
+```
