@@ -1,4 +1,5 @@
 UBUNTU=192.168.0.13
+alias dev="ssh ping@$UBUNTU"
 # start shared settings
 # iTerm2 title
 export PROMPT_COMMAND='echo -ne "\033];${PWD##*/}\007"'
@@ -62,7 +63,6 @@ function proxy_ips() {
     for i in $(seq 1 5);
          do echo "{ publicIp: '$(ip_from_instance squid$i)', port: '3128' },"
     done
-
 }
 
 function pip_from_instance() {
@@ -73,10 +73,22 @@ function instance_id() {
     echo $(aws ec2 describe-instances --filters "{\"Name\":\"tag:Name\", \"Values\":[\"$1\"]}" --query='Reservations[0].Instances[0].InstanceId' | tr -d '"')
 }
 
-function ssh-aws() {
+function start_proxy() {
+    for i in $(seq 1 1);
+         do aws ec2 start-instances --instance-ids "$(instance_id squid$i)" --output text | grep -w CURRENTSTATE | awk '{print $3}'
+    done
+}
+
+function stop_proxy() {
+    for i in $(seq 1 1);
+         do aws ec2 stop-instances --instance-ids "$(instance_id squid$i)" --output text | grep -w CURRENTSTATE | awk '{print $3}'
+    done
+}
+
+function ssh_aws() {
     ssh -i ~/.ssh/aws.pem ec2-user@$(ip_from_instance "$1")
 }
-function ssh-aws-ip() {
+function ssh_aws_ip() {
     ssh -i ~/.ssh/aws.pem ec2-user@$1
 }
 # end aws
@@ -140,3 +152,5 @@ export AIRFLOW_HOME=~/airflow
 
 # added by Anaconda2 4.4.0 installer
 export PATH="/anaconda/bin:$PATH"
+
+alias disk="find . -maxdepth 1 -type d -mindepth 1 -exec du -hs {} \;"
