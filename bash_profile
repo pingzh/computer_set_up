@@ -50,6 +50,7 @@ alias tmn='tmux new -s '
 alias tma='tmux attach -t '
 
 # aws
+source ~/.bash/aws.sh
 # end aws
 
 # docker
