@@ -1,4 +1,4 @@
-UBUNTU=192.168.0.13
+UBUNTU=192.168.0.111
 alias dev="ssh ping@$UBUNTU"
 # start shared settings
 # iTerm2 title
@@ -32,7 +32,8 @@ alias gb='git branch'
 # Added by git-aware-prompt https://github.com/jimeh/git-aware-prompt
 export GITAWAREPROMPT=~/.bash/git-aware-prompt
 source "${GITAWAREPROMPT}/main.sh"
-export PS1="\w\[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\\n$ "
+GVM='$(gvm-prompt "(%s)")'
+export PS1="\w\[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\] [${GVM}]\\n$ "
 # git complete http://code-worrier.com/blog/autocomplete-git/
 if [ -f ~/.git-completion.bash ]; then
         . ~/.git-completion.bash
@@ -104,6 +105,7 @@ export PATH="$PATH:~/bin"
 [ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
 export JAVA_HOME=$(/usr/libexec/java_home)
 export S=/Users/Ping/Documents/quantative/xmen/sigma
+export L=/Users/Ping/Documents/quantative/xmen/lambda
 
 eval "$(thefuck --alias)"
 
@@ -114,3 +116,20 @@ export AIRFLOW_HOME=~/airflow
 export PATH="/anaconda/bin:$PATH"
 
 alias disk="find . -maxdepth 1 -type d -mindepth 1 -exec du -hs {} \;"
+alias psql='psql ping'
+
+
+if which pyspark > /dev/null; then
+  export SPARK_HOME="/usr/local/Cellar/apache-spark/2.2.0/libexec/"
+  export PYTHONPATH=$SPARK_HOME/python:$SPARK_HOME/python/build:$PYTHONPATH
+  export PYTHONPATH=$SPARK_HOME/python/lib/py4j-0.10.4-src.zip:$PYTHONPATH
+fi
+
+alias quant="source activate quant"
+
+export PATH=$PATH:/usr/local/opt/go/libexec/bin
+
+[[ -s "/Users/Ping/.gvm/scripts/gvm" ]] && source "/Users/Ping/.gvm/scripts/gvm"
+
+
+ MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"

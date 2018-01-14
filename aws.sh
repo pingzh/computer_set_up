@@ -8,9 +8,18 @@ function ip_from_instance() {
 }
 
 function proxy_ips() {
-    for i in $(seq 1 5);
-         do echo "{ publicIp: '$(ip_from_instance squid$i)', port: '3128' },"
+    number_of_proxy=5
+    echo "["
+    for i in $(seq 1 $number_of_proxy);
+    do
+            result="    { \"publicIp\": \"$(ip_from_instance squid$i)\", \"port\": \"3128\" }"
+            if [ $i -lt $number_of_proxy ]; then
+                    echo "$result,"
+            else
+                    echo "$result"
+            fi
     done
+    echo "]"
 }
 
 function pip_from_instance() {
@@ -22,13 +31,13 @@ function instance_id() {
 }
 
 function start_proxy() {
-    for i in $(seq 1 1);
+    for i in $(seq 1 5);
          do aws ec2 start-instances --instance-ids "$(instance_id squid$i)" --output text | grep -w CURRENTSTATE | awk '{print $3}'
     done
 }
 
 function stop_proxy() {
-    for i in $(seq 1 1);
+    for i in $(seq 1 5);
          do aws ec2 stop-instances --instance-ids "$(instance_id squid$i)" --output text | grep -w CURRENTSTATE | awk '{print $3}'
     done
 }
