@@ -133,3 +133,24 @@ export PATH=$PATH:/usr/local/opt/go/libexec/bin
 
 
  MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
+
+
+### fix tmux history ###
+export HISTCONTROL=ignoredups:erasedups  # no duplicate entries
+export HISTSIZE=100000                   # big big history
+export HISTFILESIZE=100000               # big big history
+shopt -s histappend                      # append to history, don't overwrite it
+
+# Save and reload the history after each command finishes
+export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
+### fix history ###
+
+
+
+
+fd() {
+  local dir
+  dir=$(find ${1:-.} -path '*/\.*' -prune \
+                  -o -type d -print 2> /dev/null | fzf +m) &&
+  cd "$dir"
+}
