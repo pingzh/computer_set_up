@@ -23,5 +23,6 @@ https://github.com/pingzh/.tmux
 #### fzf 
 https://github.com/junegunn/fzf
 
-
+#### hstr
+https://github.com/dvorka/hstr
 
