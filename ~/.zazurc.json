@@ -1,6 +1,6 @@
 {
   "hotkey": "alt+space",
-  "theme": "tinytacoteam/zazu-dark-theme",
+  "theme": "tinytacoteam/zazu-light-theme",
   "displayOn": "detect",
   "plugins": [
     "tinytacoteam/zazu-calculator",
@@ -10,6 +10,10 @@
     "tinytacoteam/zazu-package-manager",
     "tinytacoteam/zazu-snippets",
     "brpaz/zazu-hash",
+    "sagold/zazu-dict",
+    "tinytacoteam/zazu-chrome-bookmarks",
+    "avaly/zazu-timezone",
+    "puyt/zazu-utime",
     {
       "name": "tinytacoteam/zazu-fallback",
       "variables": {
@@ -21,8 +25,16 @@
     {
       "name": "tinytacoteam/zazu-clipboard",
       "variables": {
-        "ClipboardKey": "cmd+shift+v"
+        "ClipboardKey": "cmd+shift+v",
+        "size": 3000
       }
+    },
+    {
+        "name": "puyt/zazu-utime",
+        "variables": {
+            "timestampUnit": "milliseconds",
+            "outputFormat": "{yyyy}/{MM}/{dd} {HH}:{mm}:{s}"
+        }
     }
   ]
 }
