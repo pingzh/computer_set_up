@@ -1,5 +1,5 @@
 {
-  "hotkey": "alt+space",
+  "hotkey": "alt+shift+space",
   "theme": "tinytacoteam/zazu-light-theme",
   "displayOn": "detect",
   "plugins": [
@@ -25,7 +25,7 @@
     {
       "name": "tinytacoteam/zazu-clipboard",
       "variables": {
-        "ClipboardKey": "cmd+shift+v",
+        "ClipboardKey": "alt+space",
         "size": 3000
       }
     },
