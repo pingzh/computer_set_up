@@ -1,0 +1,18 @@
+
+
+`conda config --set changeps1 False`
+
+
+`~/.zshrc`
+
+```
+ZSH_THEME="spaceship"
+
+
+SPACESHIP_DIR_TRUNC_REPO=false
+SPACESHIP_DIR_TRUNC=0
+SPACESHIP_KUBECONTEXT_SHOW=false
+SPACESHIP_DOCKER_SHOW=false
+SPACESHIP_GIT_STATUS_UNTRACKED=*
+
+```
