@@ -57,3 +57,5 @@ SPACESHIP_CONDA_SUFFIX=') '
 SPACESHIP_CONDA_SYMBOL='('
 
 ```
+
+### Remove all git alias in `~/.oh-my-zsh/plugins/git/git.plugin.zsh`
