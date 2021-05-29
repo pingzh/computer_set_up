@@ -13,6 +13,19 @@ echo "source $(brew --prefix)/opt/powerlevel10k/powerlevel10k.zsh-theme" >>~/.zs
 
 ```
 
+## colors
+`sudo gem install colorls`
+
+```
+brew tap homebrew/cask-fonts
+brew install --cask font-hack-nerd-font
+
+# 
+# iTerm --> In the right part -> text tab / font / click on the change button and select your font (here: Hack Nerd Font)
+# list select Solarized Dark theme and click on the default button to set it by default (bottom left)
+```
+
+
 
 ### Remove all git alias in `~/.oh-my-zsh/plugins/git/git.plugin.zsh`
 
