@@ -14,9 +14,6 @@ echo "source $(brew --prefix)/opt/powerlevel10k/powerlevel10k.zsh-theme" >>~/.zs
 ```
 
 
-`conda config --set changeps1 False`
-
-
 ### Remove all git alias in `~/.oh-my-zsh/plugins/git/git.plugin.zsh`
 
 
