@@ -25,6 +25,7 @@ alias m='mvim '
 alias ds='cd ~/Desktop'
 
 alias vz='vim ~/.zshrc'
+alias vz='vim ~/.oh-my-zsh/custom/aliases.zsh'
 alias sz='exec zsh'
 
 alias vv='vim ~/.vimrc'
