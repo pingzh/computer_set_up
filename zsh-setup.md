@@ -29,6 +29,11 @@ brew install --cask font-hack-nerd-font
 
 ### Remove all git alias in `~/.oh-my-zsh/plugins/git/git.plugin.zsh`
 
+## show full length of git branch
+
+https://github.com/romkatv/powerlevel10k/issues/419
+
+Open `~/.p10k.zsh` and find `(( $#where > 32 )) && where[13,-13]="` comment it
 
 my alias on `~/.oh-my-zsh/custom/aliases.zsh`
 
