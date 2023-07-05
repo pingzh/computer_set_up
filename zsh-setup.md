@@ -2,6 +2,12 @@
 `sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`
 
 
+## Install zinit
+
+https://github.com/zdharma-continuum/zinit
+
+
+
 ### Theme:
 
 https://github.com/romkatv/powerlevel10k#homebrew
