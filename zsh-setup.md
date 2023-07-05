@@ -74,3 +74,7 @@ alias tmn='tmux new -s '
 alias tma='tmux attach -t '
 
 alias disk="find . -maxdepth 1 -type d -mindepth 1 -exec du -hs {} \;"
+
+## Add syntax
+
+https://github.com/z-shell/F-Sy-H#zinit
