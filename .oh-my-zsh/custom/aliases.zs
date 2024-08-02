@@ -23,6 +23,9 @@ alias gt='git status'
 alias gd='git diff'
 alias gdc='git diff --cache'
 alias gb='git branch --sort=-committerdate'
+alias gb='git for-each-ref --sort=-committerdate refs/heads --format="%(authordate:short) %(color:red)%(objectname:short) %(color:yellow)%(refname:short)%(color:reset) (%(color:green)%(committerdate:relative)%(color:reset))"'
+
+
 
 alias tmn='tmux new -s '
 alias tma='tmux attach -t '
