@@ -13,6 +13,6 @@ https://github.com/pingzh/.tmux
 #### fzf 
 https://github.com/junegunn/fzf
 
-#### hstr
-https://github.com/dvorka/hstr
+#### z
+https://junegunn.github.io/fzf/examples/directory-nagivation/#zhttpsgithubcomrupaz
 
