@@ -50,7 +50,7 @@ z() {
     awk '{ print $2 }' |
     fzf --preview='ls -alh {1} | head' \
         --height 50% --layout reverse --info inline \
-        --nth 2.. --tac --no-sort --query "$*" \
+        --nth 1.. --tac --no-sort --query "$*" \
         --bind 'enter:become:echo {1..}'
   ) && cd "$dir"
 }
