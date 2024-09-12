@@ -24,7 +24,8 @@ alias gt='git status'
 alias gd='git diff'
 alias gdc='git diff --cache'
 alias gb='git for-each-ref --sort=committerdate refs/heads --format="%(authordate:short) %(color:red)%(objectname:short) %(color:yellow)%(refname:short)%(color:reset) (%(color:green)%(committerdate:relative)%(color:reset))"'
-alias gbi="git branch | fzf --preview 'git show --color=always {-1}' --bind 'enter:become(git checkout {-1})' --height 40% --layout reverse"
+alias gbi="git for-each-ref --sort=-committerdate refs/heads --format='%(authordate:short) %(refname:short)' | fzf --preview 'git show --color=always {-1}' --bind 'enter:become(git checkout {-1})' --height 40% --layout reverse"
+
 
 
 
