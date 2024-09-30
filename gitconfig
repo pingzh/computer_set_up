@@ -1,0 +1,4 @@
+[alias]
+  co = checkout
+  br = branch
+  punch = push --force-with-lease
