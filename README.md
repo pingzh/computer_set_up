@@ -13,7 +13,10 @@ https://github.com/pingzh/.tmux
 #### fzf 
 https://github.com/junegunn/fzf
 
+`brew install fzf`
+
 #### z
-brew install z
+
+`brew install z`
 
 
