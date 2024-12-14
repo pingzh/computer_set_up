@@ -14,5 +14,6 @@ https://github.com/pingzh/.tmux
 https://github.com/junegunn/fzf
 
 #### z
-https://junegunn.github.io/fzf/examples/directory-nagivation/#zhttpsgithubcomrupaz
+brew install z
+
 
