@@ -6,8 +6,9 @@
 #### Making iTerm 2 work with normal Mac OSX keyboard shortcuts 
 https://elweb.co/making-iterm-2-work-with-normal-mac-osx-keyboard-shortcuts/
 
-#### .tmux 
-https://github.com/pingzh/.tmux
+#### zsh setup
+
+[zsh-setup](zsh-setup.md)
 
 
 #### fzf 
