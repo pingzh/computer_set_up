@@ -19,8 +19,9 @@ defaults write -g KeyRepeat -int 2 # normal minimum is 2 (30 ms)
 - Vscode
     - https://github.com/pingzh/VisualStudioCodeSettings 
 - `Iterm2s`
-    - https://brew.sh/
+    - Install brew: https://brew.sh/
     - `Making iTerm 2 work with normal Mac OSX keyboard shortcuts`
+        - https://medium.com/macoclock/5-must-have-key-mappings-on-iterm2-to-be-more-productive-21c4daf56348
         - Profile —> Keys —> Key Mapping
     
     ```jsx
